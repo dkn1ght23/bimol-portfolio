@@ -1,0 +1,74 @@
+.contact-me-wrapper {
+  font-family: "Calibri";
+  overflow-y: auto;
+  min-height: calc(100vh - 70px);
+  background-color: #fafafa;
+
+  display: flex;
+  align-items: center;
+
+  .contact-me-inner-wrapper {
+    padding: 50px 200px;
+    width: 100%;
+  }
+
+  .contact-us-title {
+    margin-bottom: 40px;
+  }
+
+  .page-sub-title {
+    line-height: 30px;
+    margin: 0px 0;
+    font-size: 20px;
+    font-family: "Calibri";
+  }
+
+  .page-title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 42px;
+    font-family: "Calibri";
+  }
+
+  .contact-us-form {
+    margin-top: 10px;
+  }
+
+  .user-social-media-wrapper {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+
+    .user-social-media {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+
+      width: 40px;
+      height: 40px;
+      //   background-color: white;
+      border-radius: 50%;
+
+      .user-icons {
+        font-size: 20px;
+      }
+    }
+  }
+
+  //   .user-social-media-wrapper:hover {
+  //     .user-icons {
+  //       font-size: 20px;
+  //       color: red;
+  //     }
+  //   }
+
+  .submit-button {
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    border-radius: 8;
+  }
+}

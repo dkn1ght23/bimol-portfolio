@@ -1,0 +1,73 @@
+.modal-wrapper {
+  font-family: "Calibri";
+
+  .modal-inner-wrapper {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .modal-icons {
+      width: 15px;
+    }
+
+    .modal-details {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .institution-name {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin: 0;
+        font-size: 20px;
+        color: #212529;
+      }
+
+      .institution-details {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 700;
+        color: #6c757d;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .institution-link-details {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 700;
+        color: #6c757d;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .institution-works {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        ul {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.experience-wrapper {
+  font-family: "Calibri";
+  overflow-y: auto;
+  max-height: calc(100vh - 70px);
+  background-color: #fafafa;
+
+  .experience-inner-wrapper {
+    padding: 50px 200px;
+  }
+}

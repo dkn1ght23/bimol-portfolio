@@ -1,0 +1,22 @@
+.layout-wrapper {
+  font-family: "Calibri", sans-serif;
+  .menu-wrapper {
+    width: 100%;
+    padding: 0 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ant-menu-title-content:hover {
+    color: #006fee;
+  }
+
+  .header-logo-wrapper {
+    width: 200px;
+  }
+
+  .content {
+    background-color: white;
+  }
+}

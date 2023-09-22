@@ -1,0 +1,42 @@
+.achievements-wrapper {
+  font-family: "Calibri";
+  overflow-y: auto;
+  min-height: calc(100vh - 70px);
+  background-color: #fafafa;
+
+  .achievements-inner-wrapper {
+    padding: 50px 200px;
+  }
+
+  .achievements-type {
+    margin-bottom: 20px;
+  }
+
+  .achievements-type-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #212529;
+  }
+
+  .achievements-details {
+    margin: 0;
+    font-size: 16px;
+    color: #212529;
+    margin-bottom: 10px;
+
+    .achievements-details-inner {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      .description {
+        font-weight: 400 !important;
+      }
+    }
+  }
+}
