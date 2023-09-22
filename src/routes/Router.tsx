@@ -25,7 +25,7 @@ const AppRouter = () => {
   return (
     <Routes>
       <Route element={<LayoutWrapper />}>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/education" element={<Education />} />
         <Route path="/experience" element={<Experience />} />
