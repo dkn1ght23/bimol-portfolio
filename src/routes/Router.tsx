@@ -16,20 +16,16 @@ const AppRouter = () => {
   useEffect(() => {
     const pathname = location.pathname.slice(1);
 
-    let capitalizedPathname;
-    if (pathname === "") {
-      capitalizedPathname = "Home";
-    } else {
-      capitalizedPathname =
-        pathname.charAt(0).toUpperCase() + pathname.slice(1);
-    }
+    const capitalizedPathname =
+      pathname.charAt(0).toUpperCase() + pathname.slice(1);
+
     document.title = `${capitalizedPathname} - BN Roy`;
   }, [location.pathname]);
 
   return (
     <Routes>
       <Route element={<LayoutWrapper />}>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/education" element={<Education />} />
         <Route path="/experience" element={<Experience />} />

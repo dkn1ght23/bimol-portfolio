@@ -30,7 +30,7 @@ const LayoutWrapper = () => {
   }
 
   const items: MenuItem[] = [
-    getItem(<Link to="/">Home</Link>, "1"),
+    getItem(<Link to="/home">Home</Link>, "1"),
     getItem(<Link to="/about">About</Link>, "2"),
     getItem(<Link to="/education">Education</Link>, "3"),
     getItem(<Link to="/experience">Experience</Link>, "4"),

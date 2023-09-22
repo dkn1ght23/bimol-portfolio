@@ -7,6 +7,7 @@ export const experiences = [
     institution_link: "https://www.buet.ac.bd/web/#/",
     institution_location: "Am Wolfsmantel 46, 91058 Erlangen, Germany",
     working_time: " July 2022 – April 2023",
+
     institutional_works: [
       {
         _id: 1,
@@ -36,26 +37,5 @@ export const experiences = [
           "A 10 days scheduled training program. I was trained in Process Engineering, Crude Distillation, Condensate Fractioning, Bitumen Plant, Quality Control and Utility Plant Operations during the short attachment at ERL, Chattogram.",
       },
     ],
-  },
-];
-
-export const ExperienceCard = [
-  {
-    _id: 1,
-    position_name: "Working Student - Automation",
-    institution_name: "Elektrobit Automotive GmbH",
-    working_time: " July 2022 – April 2023",
-  },
-  {
-    _id: 2,
-    position_name: "Working Student - Automation",
-    institution_name: "Elektrobit Automotive GmbH",
-    working_time: " July 2022 – April 2023",
-  },
-  {
-    _id: 3,
-    position_name: "Working Student - Automation",
-    institution_name: "Elektrobit Automotive GmbH",
-    working_time: " July 2022 – April 2023",
   },
 ];
