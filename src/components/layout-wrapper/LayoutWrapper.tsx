@@ -4,6 +4,7 @@ import { Layout, Menu } from "antd";
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 import type { MenuProps } from "antd";
+import { MenuOutlined } from "@ant-design/icons";
 // import logo from "../../assets/images/baseLogo.png";
 // import logo from "../../assets/images/borderLessLogo.png";
 // import logo from "../../assets/images/longLogo.png";
@@ -59,6 +60,7 @@ const LayoutWrapper = () => {
         >
           <div className="menu-wrapper">
             <Menu
+              expandIcon={<MenuOutlined />}
               mode="horizontal"
               defaultSelectedKeys={["1"]}
               defaultOpenKeys={["sub1"]}

@@ -52,11 +52,34 @@
 
 .education-wrapper {
   font-family: "Calibri";
-  background-color: #fafafa;
   overflow-y: auto;
   max-height: calc(100vh - 70px);
 
   .education-inner-wrapper {
     padding: 50px 200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .education-wrapper {
+    .education-inner-wrapper {
+      padding: 50px 100px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .education-wrapper {
+    .education-inner-wrapper {
+      padding: 50px 50px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .education-wrapper {
+    .education-inner-wrapper {
+      padding: 10px 20px;
+    }
   }
 }

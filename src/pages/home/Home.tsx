@@ -15,8 +15,13 @@ const Home = () => {
   return (
     <div className="home-wrapper">
       <div className="home-inner-wrapper">
-        <Row gutter={60} align="middle">
-          <Col span={12}>
+        <Row gutter={{ md: 60 }} align="middle" justify="center">
+          <Col span={24} md={{ span: 12 }} className="image-col">
+            <div className="user-image-wrapper">
+              <Image src={user_image} preview={false} className="user-image" />
+            </div>
+          </Col>
+          <Col span={24} md={{ span: 12 }}>
             <div className="user-details-wrapper">
               <h3 className="user-hi">Hi There,</h3>
 
@@ -81,17 +86,6 @@ const Home = () => {
                   </Link>
                 </div>
               </div>
-            </div>
-          </Col>
-          <Col span={12}>
-            <div className="user-image-wrapper">
-              <Image
-                src={user_image}
-                preview={false}
-                className="user-image"
-                width={380}
-                height={380}
-              />
             </div>
           </Col>
         </Row>

@@ -8,6 +8,7 @@ function Typewriter(props: any) {
 
   useEffect(() => {
     tick();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -23,11 +24,13 @@ function Typewriter(props: any) {
     }
 
     setTimeout(() => tick(), delta);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [txt, fullTxt, isDeleting, props.period]);
 
   function tick() {
     const i = loopNum % props.toRotate.length;
-    const currentFullTxt = props.toRotate[i]; // Use a different variable name
+    const currentFullTxt = props.toRotate[i];
 
     if (isDeleting) {
       setTxt((prevTxt) => prevTxt.substring(0, prevTxt.length - 1));
@@ -48,7 +51,7 @@ function Typewriter(props: any) {
   return (
     <p
       style={{
-        height: "51px",
+        minHeight: "51px",
         fontSize: "42px",
         margin: 0,
         fontFamily: "Calibri",

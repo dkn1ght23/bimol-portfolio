@@ -2,7 +2,6 @@
   font-family: "Calibri";
   overflow-y: auto;
   min-height: calc(100vh - 70px);
-  background-color: #fafafa;
 
   .achievements-inner-wrapper {
     padding: 50px 200px;
@@ -37,6 +36,30 @@
       .description {
         font-weight: 400 !important;
       }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .achievements-wrapper {
+    .achievements-inner-wrapper {
+      padding: 50px 100px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements-wrapper {
+    .achievements-inner-wrapper {
+      padding: 50px 50px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .achievements-wrapper {
+    .achievements-inner-wrapper {
+      padding: 10px 20px;
     }
   }
 }

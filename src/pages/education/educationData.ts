@@ -7,6 +7,7 @@ export const educations = [
     institution_location: "Dhaka, Bangladesh",
     faculty_name: "Faculty of Engineering",
     degree_name: "Bachelor of Science (B.Sc.) in Chemical Engineering",
+    cgpa: "CGPA: 3.69 out of 4.00",
     gradution_time: "October 2018 – 2023",
     institutional_works: [
       {

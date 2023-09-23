@@ -2,7 +2,6 @@
   font-family: "Calibri";
   overflow-y: auto;
   min-height: calc(100vh - 70px);
-  background-color: #fafafa;
 
   display: flex;
   align-items: center;
@@ -19,8 +18,8 @@
   }
 
   .user-image-wrapper {
-    width: 380;
-    height: 380;
+    max-width: 380px;
+    max-height: 380px;
     border-radius: 50%;
 
     .user-image {
@@ -84,6 +83,44 @@
           border: 1px solid #006fee;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .home-wrapper {
+    .home-inner-wrapper {
+      padding: 50px 100px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home-wrapper {
+    .home-inner-wrapper {
+      justify-content: center;
+    }
+
+    .user-image-wrapper {
+      width: 380px;
+      height: 380px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .image-col {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-wrapper {
+    .home-inner-wrapper {
+      padding: 50px 20px;
     }
   }
 }

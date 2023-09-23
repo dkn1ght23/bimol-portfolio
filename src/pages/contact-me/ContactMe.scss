@@ -2,7 +2,6 @@
   font-family: "Calibri";
   overflow-y: auto;
   min-height: calc(100vh - 70px);
-  background-color: #fafafa;
 
   display: flex;
   align-items: center;
@@ -56,13 +55,6 @@
     }
   }
 
-  //   .user-social-media-wrapper:hover {
-  //     .user-icons {
-  //       font-size: 20px;
-  //       color: red;
-  //     }
-  //   }
-
   .submit-button {
     padding: 20px 40px;
     display: flex;
@@ -70,5 +62,33 @@
     font-size: 18px;
     color: white;
     border-radius: 8;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-me-wrapper {
+    .contact-me-inner-wrapper {
+      padding: 50px 100px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-me-wrapper {
+    .contact-me-inner-wrapper {
+      padding: 50px 50px;
+    }
+
+    .form-wrapper {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-me-wrapper {
+    .contact-me-inner-wrapper {
+      padding: 10px 20px;
+    }
   }
 }

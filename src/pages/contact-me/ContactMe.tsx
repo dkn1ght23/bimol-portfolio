@@ -57,8 +57,8 @@ const ContactMe = () => {
   return (
     <div className="contact-me-wrapper">
       <div className="contact-me-inner-wrapper">
-        <Row gutter={60} align="middle">
-          <Col span={12}>
+        <Row gutter={{ md: 60 }} align="middle">
+          <Col span={24} md={{ span: 12 }}>
             <div className="contact-us-title">
               <h3 className="page-title">Get in touch</h3>
               <p className="page-sub-title">Need to get in touch with me?</p>
@@ -119,82 +119,88 @@ const ContactMe = () => {
               </div>
             </div>
           </Col>
-          <Col span={12}>
-            <p className="page-sub-title">Fill the form to connect</p>
-            <form
-              onSubmit={handleSubmit(onSubmit)}
-              ref={form}
-              className="contact-us-form"
-            >
-              <div className="margin-bottom-30">
-                <Controller
-                  render={({ field }) => (
-                    <Input
-                      {...field}
-                      placeholder="Name"
-                      className="general-input"
-                    />
-                  )}
-                  name="user_name"
-                  control={control}
-                  rules={{ required: true }}
-                />
-                {errors?.user_name?.type === "required" && (
-                  <span className="error-message">Please Enter Your Name</span>
-                )}
-              </div>
-              <div className="margin-bottom-30">
-                <Controller
-                  render={({ field }) => (
-                    <Input
-                      {...field}
-                      placeholder="Email"
-                      className="general-input"
-                    />
-                  )}
-                  name="user_email"
-                  control={control}
-                  rules={{ required: true, pattern: RegexValidators.EMAIL }}
-                />
-                {errors?.user_email?.type === "required" && (
-                  <span className="error-message">Please Enter Your Email</span>
-                )}
-                {errors?.user_email?.type === "pattern" && (
-                  <span className="error-message">
-                    Please Enter a valid Email Address Name
-                  </span>
-                )}
-              </div>
-              <div className="margin-bottom-30">
-                <Controller
-                  render={({ field }) => (
-                    <TextArea
-                      {...field}
-                      placeholder="Message"
-                      className="general-input"
-                      autoSize={{ minRows: 3, maxRows: 5 }}
-                    />
-                  )}
-                  name="message"
-                  control={control}
-                  rules={{ required: true }}
-                />
-
-                {errors?.user_email?.type === "required" && (
-                  <span className="error-message">
-                    Please Enter Your Message
-                  </span>
-                )}
-              </div>
-              <Button
-                type="primary"
-                htmlType="submit"
-                className="submit-button"
-                loading={isLoading}
+          <Col span={24} md={{ span: 12 }}>
+            <div className="form-wrapper">
+              <p className="page-sub-title">Fill the form to connect</p>
+              <form
+                onSubmit={handleSubmit(onSubmit)}
+                ref={form}
+                className="contact-us-form"
               >
-                Send Message
-              </Button>
-            </form>
+                <div className="margin-bottom-30">
+                  <Controller
+                    render={({ field }) => (
+                      <Input
+                        {...field}
+                        placeholder="Name"
+                        className="general-input"
+                      />
+                    )}
+                    name="user_name"
+                    control={control}
+                    rules={{ required: true }}
+                  />
+                  {errors?.user_name?.type === "required" && (
+                    <span className="error-message">
+                      Please Enter Your Name
+                    </span>
+                  )}
+                </div>
+                <div className="margin-bottom-30">
+                  <Controller
+                    render={({ field }) => (
+                      <Input
+                        {...field}
+                        placeholder="Email"
+                        className="general-input"
+                      />
+                    )}
+                    name="user_email"
+                    control={control}
+                    rules={{ required: true, pattern: RegexValidators.EMAIL }}
+                  />
+                  {errors?.user_email?.type === "required" && (
+                    <span className="error-message">
+                      Please Enter Your Email
+                    </span>
+                  )}
+                  {errors?.user_email?.type === "pattern" && (
+                    <span className="error-message">
+                      Please Enter a valid Email Address Name
+                    </span>
+                  )}
+                </div>
+                <div className="margin-bottom-30">
+                  <Controller
+                    render={({ field }) => (
+                      <TextArea
+                        {...field}
+                        placeholder="Message"
+                        className="general-input"
+                        autoSize={{ minRows: 3, maxRows: 5 }}
+                      />
+                    )}
+                    name="message"
+                    control={control}
+                    rules={{ required: true }}
+                  />
+
+                  {errors?.user_email?.type === "required" && (
+                    <span className="error-message">
+                      Please Enter Your Message
+                    </span>
+                  )}
+                </div>
+                <Button
+                  type="primary"
+                  htmlType="submit"
+                  className="submit-button"
+                  loading={isLoading}
+                >
+                  Send Message
+                </Button>
+              </form>
+            </div>
           </Col>
         </Row>
       </div>

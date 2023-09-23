@@ -65,9 +65,32 @@
   font-family: "Calibri";
   overflow-y: auto;
   max-height: calc(100vh - 70px);
-  background-color: #fafafa;
 
   .experience-inner-wrapper {
     padding: 50px 200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .experience-wrapper {
+    .experience-inner-wrapper {
+      padding: 50px 100px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-wrapper {
+    .experience-inner-wrapper {
+      padding: 50px 50px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .experience-wrapper {
+    .experience-inner-wrapper {
+      padding: 10px 20px;
+    }
   }
 }

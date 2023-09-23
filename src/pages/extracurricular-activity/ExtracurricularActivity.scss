@@ -1,6 +1,5 @@
 .extracurricular-wrapper {
   font-family: "Calibri";
-  background-color: #fafafa;
   overflow-y: auto;
   max-height: calc(100vh - 70px);
 
@@ -34,6 +33,30 @@
     .activity-details {
       margin-bottom: 0;
       font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .extracurricular-wrapper {
+    .extracurricular-inner-wrapper {
+      padding: 50px 100px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .extracurricular-wrapper {
+    .extracurricular-inner-wrapper {
+      padding: 50px 50px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .extracurricular-wrapper {
+    .extracurricular-inner-wrapper {
+      padding: 10px 20px;
     }
   }
 }

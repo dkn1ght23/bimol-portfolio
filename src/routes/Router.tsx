@@ -14,10 +14,15 @@ const AppRouter = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const pathname = location.pathname.slice(1);
+    const pathName = location.pathname.slice(1);
 
-    const capitalizedPathname =
-      pathname.charAt(0).toUpperCase() + pathname.slice(1);
+    let capitalizedPathname;
+    if (pathName === "") {
+      capitalizedPathname = "Home";
+    } else {
+      capitalizedPathname =
+        pathName.charAt(0).toUpperCase() + pathName.slice(1);
+    }
 
     document.title = `${capitalizedPathname} - BN Roy`;
   }, [location.pathname]);

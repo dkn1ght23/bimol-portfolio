@@ -68,3 +68,27 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+  .research-wrapper {
+    .research-inner-wrapper {
+      padding: 50px 100px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .research-wrapper {
+    .research-inner-wrapper {
+      padding: 50px 50px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .research-wrapper {
+    .research-inner-wrapper {
+      padding: 10px 20px;
+    }
+  }
+}
