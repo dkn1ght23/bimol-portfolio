@@ -23,7 +23,7 @@ const Home = () => {
           </Col>
           <Col span={24} md={{ span: 12 }}>
             <div className="user-details-wrapper">
-              <h3 className="user-hi">Hi There,</h3>
+              <h3 className="user-hi">Hello There,</h3>
 
               <Typewriter
                 toRotate={["I'm Bimol Nath Roy", "I'm a Research Assistant"]}
