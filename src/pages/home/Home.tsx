@@ -1,12 +1,11 @@
 import "./Home.scss";
 import { Button, Col, Image, Row } from "antd";
 import user_image from "../../assets/images/user-image.jpeg";
+import orcid from "../../assets/images/orcid.png";
 import {
   FacebookOutlined,
   GithubOutlined,
-  InstagramOutlined,
   LinkedinFilled,
-  TwitterOutlined,
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import Typewriter from "./TypeWriter";
@@ -26,7 +25,10 @@ const Home = () => {
               <h3 className="user-hi">Hello There,</h3>
 
               <Typewriter
-                toRotate={["I'm Bimol Nath Roy", "I'm a Research Assistant"]}
+                toRotate={[
+                  "I'm Bimol Nath Roy",
+                  "A Chemical Engineering Graduate",
+                ]}
                 period={2000}
               />
 
@@ -45,9 +47,26 @@ const Home = () => {
                     <LinkedinFilled className="user-icons" />
                   </Link>
                 </div>
+
                 <div className="user-social-media">
                   <Link
-                    to="https://www.linkedin.com/in/bimolnr/"
+                    to="https://orcid.org/0000-0001-5387-5036"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="user-link"
+                  >
+                    <Image
+                      src={orcid}
+                      width={21}
+                      height={21}
+                      preview={false}
+                      className="user-icons"
+                    />
+                  </Link>
+                </div>
+                <div className="user-social-media">
+                  <Link
+                    to="https://github.com/bimolnr"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="user-link"
@@ -57,27 +76,7 @@ const Home = () => {
                 </div>
                 <div className="user-social-media">
                   <Link
-                    to="https://www.linkedin.com/in/bimolnr/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="user-link"
-                  >
-                    <TwitterOutlined className="user-icons" />
-                  </Link>
-                </div>
-                <div className="user-social-media">
-                  <Link
-                    to="https://www.linkedin.com/in/bimolnr/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="user-link"
-                  >
-                    <InstagramOutlined className="user-icons" />
-                  </Link>
-                </div>
-                <div className="user-social-media">
-                  <Link
-                    to="https://www.linkedin.com/in/bimolnr/"
+                    to="https://www.facebook.com/bimolnr"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="user-link"

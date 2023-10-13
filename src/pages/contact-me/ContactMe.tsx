@@ -1,22 +1,21 @@
 import { useRef, useState } from "react";
 import "./ContactMe.scss";
 import { Controller, useForm } from "react-hook-form";
-import { Button, Col, Input, Row } from "antd";
+import { Button, Col, Input, Row, message, Image } from "antd";
 import emailjs from "@emailjs/browser";
 import TextArea from "antd/es/input/TextArea";
 import { RegexValidators } from "../../config/regex-validator--constant";
 import {
   FacebookOutlined,
   GithubOutlined,
-  InstagramOutlined,
   LinkedinFilled,
-  TwitterOutlined,
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
+import orcid from "../../assets/images/orcid.png";
 
 interface contactForm {
-  user_name: string;
-  user_email: string;
+  to_name: string;
+  from_email: string;
   message: string;
 }
 
@@ -24,6 +23,7 @@ const ContactMe = () => {
   const {
     handleSubmit,
     control,
+    reset,
     formState: { errors },
   } = useForm<contactForm>();
 
@@ -37,19 +37,22 @@ const ContactMe = () => {
 
     emailjs
       .sendForm(
-        "service_5rl1l8k",
-        "template_i860apb",
+        "service_9cetc9a",
+        "template_z4daixp",
         form.current!,
-        "8k4vgv0Sd-26Plxs9"
+        "qXkCWWJXXy1G1ho97"
       )
       .then(
         (result: any) => {
           setIsLoading(false);
           console.log(result.text);
+          message.success("Got your message, thank you");
+          reset();
         },
         (error: any) => {
           setIsLoading(false);
           console.log(error.text);
+          message.success("Email sending failed");
         }
       );
   };
@@ -79,7 +82,23 @@ const ContactMe = () => {
               </div>
               <div className="user-social-media">
                 <Link
-                  to="https://www.linkedin.com/in/bimolnr/"
+                  to="https://orcid.org/0000-0001-5387-5036"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="user-link"
+                >
+                  <Image
+                    src={orcid}
+                    width={21}
+                    height={21}
+                    preview={false}
+                    className="user-icons"
+                  />
+                </Link>
+              </div>
+              <div className="user-social-media">
+                <Link
+                  to="https://github.com/bimolnr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="user-link"
@@ -89,27 +108,7 @@ const ContactMe = () => {
               </div>
               <div className="user-social-media">
                 <Link
-                  to="https://www.linkedin.com/in/bimolnr/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="user-link"
-                >
-                  <TwitterOutlined className="user-icons" />
-                </Link>
-              </div>
-              <div className="user-social-media">
-                <Link
-                  to="https://www.linkedin.com/in/bimolnr/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="user-link"
-                >
-                  <InstagramOutlined className="user-icons" />
-                </Link>
-              </div>
-              <div className="user-social-media">
-                <Link
-                  to="https://www.linkedin.com/in/bimolnr/"
+                  to="https://www.facebook.com/bimolnr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="user-link"
@@ -132,15 +131,15 @@ const ContactMe = () => {
                     render={({ field }) => (
                       <Input
                         {...field}
-                        placeholder="Name"
+                        placeholder="Full Name"
                         className="general-input"
                       />
                     )}
-                    name="user_name"
+                    name="to_name"
                     control={control}
                     rules={{ required: true }}
                   />
-                  {errors?.user_name?.type === "required" && (
+                  {errors?.to_name?.type === "required" && (
                     <span className="error-message">
                       Please Enter Your Name
                     </span>
@@ -155,16 +154,16 @@ const ContactMe = () => {
                         className="general-input"
                       />
                     )}
-                    name="user_email"
+                    name="from_email"
                     control={control}
                     rules={{ required: true, pattern: RegexValidators.EMAIL }}
                   />
-                  {errors?.user_email?.type === "required" && (
+                  {errors?.from_email?.type === "required" && (
                     <span className="error-message">
                       Please Enter Your Email
                     </span>
                   )}
-                  {errors?.user_email?.type === "pattern" && (
+                  {errors?.from_email?.type === "pattern" && (
                     <span className="error-message">
                       Please Enter a valid Email Address Name
                     </span>
@@ -185,7 +184,7 @@ const ContactMe = () => {
                     rules={{ required: true }}
                   />
 
-                  {errors?.user_email?.type === "required" && (
+                  {errors?.from_email?.type === "required" && (
                     <span className="error-message">
                       Please Enter Your Message
                     </span>
