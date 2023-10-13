@@ -1,8 +1,8 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import "./ContactMe.scss";
 import { Controller, useForm } from "react-hook-form";
 import { Button, Col, Input, Row } from "antd";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import TextArea from "antd/es/input/TextArea";
 import { RegexValidators } from "../../config/regex-validator--constant";
 import {
@@ -35,23 +35,23 @@ const ContactMe = () => {
     console.log(data);
     setIsLoading(true);
 
-    // emailjs
-    //   .sendForm(
-    //     "service_5rl1l8k",
-    //     "template_i860apb",
-    //     form.current!,
-    //     "8k4vgv0Sd-26Plxs9"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       setIsLoading(false);
-    //       console.log(result.text);
-    //     },
-    //     (error) => {
-    //       setIsLoading(false);
-    //       console.log(error.text);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        "service_5rl1l8k",
+        "template_i860apb",
+        form.current!,
+        "8k4vgv0Sd-26Plxs9"
+      )
+      .then(
+        (result: any) => {
+          setIsLoading(false);
+          console.log(result.text);
+        },
+        (error: any) => {
+          setIsLoading(false);
+          console.log(error.text);
+        }
+      );
   };
 
   return (
