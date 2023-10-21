@@ -1,4 +1,22 @@
-export const experiences = [
+interface Experience {
+  _id: number;
+  position_name: string;
+  institution_name: string;
+  institution_link: string;
+  institution_location: string;
+  working_time: string;
+  institutional_works: Array<{
+    _id: number;
+    work_name: string;
+  }>;
+  supervisor?: Array<{
+    _id: number;
+    name: string;
+    position: string;
+  }>;
+}
+
+export const experiences: Experience[] = [
   {
     _id: 1,
     position_name: "Research Assistant",

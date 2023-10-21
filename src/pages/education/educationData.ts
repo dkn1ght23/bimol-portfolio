@@ -1,4 +1,19 @@
-export const educations = [
+interface Education {
+  _id: number;
+  institution_name: string;
+  institution_link: string;
+  institution_location: string;
+  faculty_name?: string; // Optional field
+  degree_name: string;
+  cgpa: string;
+  gradution_time: string;
+  institutional_works?: Array<{
+    _id: number;
+    work_name: string;
+  }>;
+}
+
+export const educations: Education[] = [
   {
     _id: 1,
     institution_name:

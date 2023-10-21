@@ -1,4 +1,3 @@
-import React from "react";
 import "./Achievements.scss";
 import { achievements, certifications } from "./achievementsData";
 import { IconLink } from "@tabler/icons-react";

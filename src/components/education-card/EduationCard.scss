@@ -14,17 +14,17 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 270px; // Set the initial height, adjust as needed
+    height: 270px;
   }
 
   .card-description {
     padding: 20px 30px;
-    // color: #bbbbbb;
+
     font-size: 13px;
 
     .card-name {
       margin: 0;
-      //   color: #dadde2;
+
       font-size: 18px;
       font-weight: 400;
     }
@@ -33,14 +33,12 @@
       margin: 0;
       font-size: 26px;
       font-weight: 600;
-      //   color: #ffff;
     }
 
     .read-more {
       margin: 20px 0;
       font-size: 12px;
       font-weight: 500;
-      //   color: #ffff;
     }
   }
 
