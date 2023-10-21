@@ -11,6 +11,12 @@
     width: 100%;
   }
 
+  .image-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .user-link {
     font-size: 16px;
     color: black;
@@ -112,8 +118,10 @@
   }
 
   .image-col {
+    border: 1px solid blue;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 }
 

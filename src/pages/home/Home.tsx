@@ -17,7 +17,12 @@ const Home = () => {
         <Row gutter={{ md: 60 }} align="middle" justify="center">
           <Col span={24} md={{ span: 12 }} className="image-col">
             <div className="user-image-wrapper">
-              <Image src={user_image} preview={false} className="user-image" />
+              <Image
+                src={user_image}
+                preview={false}
+                className="user-image"
+                alt="Home Image"
+              />
             </div>
           </Col>
           <Col span={24} md={{ span: 12 }}>
@@ -41,6 +46,7 @@ const Home = () => {
                   <Link
                     to="https://www.linkedin.com/in/bimolnr/"
                     target="_blank"
+                    aria-label="Linkedin"
                     rel="noopener noreferrer"
                     className="user-link"
                   >
@@ -52,6 +58,7 @@ const Home = () => {
                   <Link
                     to="https://orcid.org/0000-0001-5387-5036"
                     target="_blank"
+                    aria-label="orcid"
                     rel="noopener noreferrer"
                     className="user-link"
                   >
@@ -61,6 +68,7 @@ const Home = () => {
                       height={21}
                       preview={false}
                       className="user-icons"
+                      alt="Orcid Logo"
                     />
                   </Link>
                 </div>
@@ -68,6 +76,7 @@ const Home = () => {
                   <Link
                     to="https://github.com/bimolnr"
                     target="_blank"
+                    aria-label="github"
                     rel="noopener noreferrer"
                     className="user-link"
                   >
@@ -78,6 +87,7 @@ const Home = () => {
                   <Link
                     to="https://www.facebook.com/bimolnr"
                     target="_blank"
+                    aria-label="facebook"
                     rel="noopener noreferrer"
                     className="user-link"
                   >
